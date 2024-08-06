@@ -13,14 +13,14 @@
 {% endfor %}
 
 {% if dishes.has_previous %}
-<a href="?page={{ dishes.previous_page_number }}">
-    <button>Назад</button>
-</a>
+    <a href="?page={{ dishes.previous_page_number }}">
+        <button>Назад</button>
+    </a>
 {% endif %}
 {% if dishes.has_next %}
-<a href="?page={{ dishes.next_page_number }}">
-    <button>Вперед</button>
-</a>
+    <a href="?page={{ dishes.next_page_number }}">
+        <button>Вперед</button>
+    </a>
 {% endif %}
 </body>
 </html>
