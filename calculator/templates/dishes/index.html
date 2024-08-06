@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блюда</title>
+</head>
+<body>
+{% for dish in dishes %}
+    <a href="/{{ dish }}/">
+        <p>{{ dish }}</p>
+    </a>
+{% endfor %}
+
+{% if dishes.has_previous %}
+<a href="?page={{ dishes.previous_page_number }}">
+    <button>Назад</button>
+</a>
+{% endif %}
+{% if dishes.has_next %}
+<a href="?page={{ dishes.next_page_number }}">
+    <button>Вперед</button>
+</a>
+{% endif %}
+</body>
+</html>

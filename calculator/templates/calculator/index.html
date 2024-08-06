@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепт для {{ dish_name }}</title>
+</head>
+<body>
+<h1>Рецепт для {{ dish_name }}</h1>
+{% for ingredient, amount in recipe.items %}
+    <p>{{ ingredient }}: {{ amount }}</p>
+{% endfor %}
+<a href="/">
+    <button>На главную</button>
+</a>
+</body>
+</html>
